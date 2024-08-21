@@ -8,7 +8,7 @@ n5:             .word   5
 newLineText:    .asciiz "\n"
 averageText:    .asciiz "Average : "
 evenNumberText: .asciiz "Evevn Number : "
-oddNumberText:  .asciiz "Odd Number : "
+oddNumberText:  .asciiz "Odd Number   : "
 
 .text
                 .globl  main
@@ -31,7 +31,7 @@ main:
     la      $a0,                n5
     lw      $a0,                0($a0)
     jal     checkEvenAndPrint
-
+    j       exit
 
 
 checkEvenAndPrint:
@@ -66,3 +66,7 @@ printEven:
 
 endFunc:
     jr      $ra
+
+exit:
+    li      $v0,                10
+    syscall
