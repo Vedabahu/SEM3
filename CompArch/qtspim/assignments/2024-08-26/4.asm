@@ -1,3 +1,7 @@
+    # Name:        Rutwik S
+    # Roll Number: 23bcs112
+    # Date:        2024-08-26
+
     # Write a program to compute the GCD and LCM of the two numbers and store the
     # result in suitable registers.
 

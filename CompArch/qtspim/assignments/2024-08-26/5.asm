@@ -1,3 +1,7 @@
+    # Name:        Rutwik S
+    # Roll Number: 23bcs112
+    # Date:        2024-08-26
+
     # Fibonacci Series. Input: user provided command line argument, a random
     # positive integer, say n. Calculate the nth, and the next number in the Fibonacci
     # sequence using (a) loops, (b) recursion. The two outputs should be in registers
