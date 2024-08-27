@@ -1,0 +1,1 @@
+bool complain(char *prblem);
