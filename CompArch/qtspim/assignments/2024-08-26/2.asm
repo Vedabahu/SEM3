@@ -1,3 +1,7 @@
+    # Name:        Rutwik S
+    # Roll Number: 23bcs112
+    # Date:        2024-08-26
+
     # Calculate the area of a rectangle and exit the program.
     # (store the length and breadth of the sides of a rectangle
     # in registers and calculate the area as per the formula)

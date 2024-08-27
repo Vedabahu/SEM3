@@ -1,3 +1,7 @@
+    # Name:        Rutwik S
+    # Roll Number: 23bcs112
+    # Date:        2024-08-26
+
     # Write a program to check whether an entered string is palindrome or not.
 .data
 str1:                   .asciiz "madam"
