@@ -38,6 +38,14 @@ main:
     move    $a0,                $t0
     li      $v0,                1
     syscall
+    li      $a0,                32
+    li      $v0,                11
+    syscall
+
+    move    $a0,                $t4
+    li      $v0,                1
+    syscall
+
     li      $v0,                10
     syscall
 
@@ -68,12 +76,29 @@ endLoopFunc:
     la      $a0,                outStr1
     li      $v0,                4
     syscall
+    move    $a0,                $t4                         # Print 1st number
+    li      $v0,                1
+    syscall
+
+    move    $t0,                $t1
+    move    $t1,                $t4
+    add     $t4,                $t0,        $t1
+
+    li      $a0,                32
+    li      $v0,                11
+    syscall
+
     move    $a0,                $t4
     li      $v0,                1
     syscall
+
     la      $a0,                newLine
     li      $v0,                4
     syscall
+
+    move    $v0,                $t1
+    move    $v1,                $t4
+
     jr      $ra
 
 fibUsingRecursion:
@@ -97,4 +122,3 @@ fibonacciExit:
     lw      $s1,                0($sp)
     addi    $sp,                $sp,        12
     jr      $ra
-
