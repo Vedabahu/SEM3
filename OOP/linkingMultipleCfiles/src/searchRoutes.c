@@ -5,6 +5,7 @@
 void displayRoutes(int *routes)
 {
     printf("Displaying all the routes.\n");
+    printf("Please visit the generated link for the list : https://erp.iitkgp.ac.in/InfoCellDetails/resources/external/groupemailfile?file_id=749\n");
 }
 
 bool checkBusAvailability(char *busInformation)
