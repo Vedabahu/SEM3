@@ -1,12 +1,14 @@
 #include <stdio.h>
 
-int binary_search(int* arr, int size, int ele) {
+int binary_search(int *arr, int size, int ele)
+{
 
     int a = 0;
     int b = size - 1;
     int mid = 0;
 
-    while (a < b) {
+    while (a < b)
+    {
         mid = (a + b) / 2;
         int temp = arr[mid];
         if (temp == ele)
@@ -27,7 +29,7 @@ int main()
 
     int position = binary_search(a, 11, search_elelmet);
 
-    if (position == -1) 
+    if (position == -1)
         printf("Element not found.");
     else
         printf("Element found at position : %d", position);

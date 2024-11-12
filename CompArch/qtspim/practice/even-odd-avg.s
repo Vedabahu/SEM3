@@ -52,7 +52,7 @@ else:
 end_if:
 
     add     $t1,            $t1,        $t2
-    addi    $t0,            $t0,         1
+    addi    $t0,            $t0,        1
     j       while
 end_while:
     div     $t1,            $s0

@@ -48,7 +48,7 @@ while:      beq     $s4,    $0,     while_end
     add     $s6,    $s4,    $0
     div     $s5,    $s6
     mfhi    $s4
-    j while
+    j       while
 while_end:
 
     move    $s2,    $s6
@@ -69,7 +69,7 @@ while_end:
     syscall
     move    $a0,    $s3
     li      $v0,    1
-    syscall 
+    syscall
 
     li      $v0,    10
     syscall
