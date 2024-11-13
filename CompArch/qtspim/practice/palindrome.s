@@ -1,98 +1,81 @@
 .data
-str:        .asciiz "civic"
-size:       .word   5
-
-isPal:      .asciiz "String is a palindrome"
-isNotPal:   .asciiz "String is not a palindrome"
+str: .space 100
+size: .space 0
+inp0: .asciiz "Enter the string size : "
+inp: .asciiz "Enter a string : "
+out0: .asciiz "\nString is not a palindrome.\n"
+out1: .asciiz "\nString is a palindrome.\n"
 
 .text
-            .globl  main
+.globl main
 main:
-    la      $a0,            str
-    lw      $a1,            size
-    jal     isPalindrome
-    move    $t0,            $v0
+	li $v0, 4
+	la $a0, inp0
+	syscall
 
-if_000:
-    bne     $t0,            1,          else_000
+	li $v0, 5
+	syscall	
+	addi $v0, $v0, 1 #including space for null character
+	
+	sw $v0, size
+		
+	li $v0, 4
+	la $a0, inp
+	syscall
+	
+	li $v0, 8
+	la $a0, str
+	lw $a1, size
+	syscall
 
-    la      $a0,            isPal
-    li      $v0,            4
-    syscall
-
-    j       end_if_000
-else_000:
-
-    la      $a0,            isNotPal
-    li      $v0,            4
-    syscall
-
-end_if_000:
-
-    li      $v0,            10
-    syscall
-
+	la $a0, str
+	lw $a1, size
+	addi $a1, $a1, -1 # sending actual length of the string
+	jal isPalindrome
+	
+	if_0:
+		bne $v0, $0, else_0
+		
+		li $v0, 4
+		la $a0, out0
+		syscall
+		
+		j end_if_0
+	else_0:
+	
+		li $v0, 4
+		la $a0, out1
+		syscall
+	
+	end_if_0:
+	
+	li $v0, 10
+	syscall
+	
 isPalindrome:
-
-if_001:
-    bne     $a1,            0,          end_if_001
-    li      $v0,            1
-    jr      $ra
-end_if_001:
-
-    addi    $sp,            $sp,        -4
-    sw      $ra,            0($sp)
-
-    move    $a0,            $a0
-    addi    $a2,            $a1,        -1
-    li      $a1,            0
-    jal     palHelper
-
-    lw      $ra,            0($sp)
-    addi    $sp,            $sp,        4
-
-    jr      $ra
-
-palHelper:
-    move    $s0,            $a0
-    move    $s1,            $a1
-    move    $s2,            $a2
-
-if_002:
-    bne     $s2,            $s3,        end_if_002
-    li      $v0,            1
-    jr      $ra
-end_if_002:
-
-    add     $t0,            $s0,        $s1
-    add     $t1,            $s0,        $s2
-    lb      $t0,            0($t0)
-    lb      $t1,            0($t1)
-if_003:
-    beq     $t0,            $t1,        end_if_003
-    li      $v0,            0
-    jr      $ra
-end_if_003:
-
-if_004:
-    addi    $t0,            $s2,        1
-    bge     $s1,            $t0,        end_if_004
-
-    addi    $sp,            $sp,        -4
-    sw      $ra,            0($sp)
-
-    move    $a0,            $s0
-    addi    $a1,            $s1,        1
-    addi    $a2,            $s2,        -1
-
-    jal     palHelper
-
-    lw      $ra,            0($sp)
-    addi    $sp,            $sp,        4
-
-    jr      $ra
-
-end_if_004:
-
-    li      $v0,            1
-    jr      $ra
+	move $s0, $a0
+	move $s1, $a1
+	
+	li $t0, 0
+	addi $t1, $s1, -1
+	
+	while:
+		bge $t0, $t1, end_while
+		
+		if:
+			lb $t2, str($t0)
+			lb $t3, str($t1)
+			beq $t2, $t3, end_if
+			li $v0, 0	
+			jr $ra
+		end_if:
+		addi $t0, $t0, 1
+		addi $t1, $t1, -1	
+		j while
+	end_while:
+	
+	li $v0, 1
+	jr $ra
+	
+	
+	
