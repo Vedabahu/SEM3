@@ -1,0 +1,9 @@
+[doc]
+name = "lab1"
+bundle = "https://data1.fullyjustified.net/tlextras-2022.0r0.tar"
+# extra_paths = ["src/images"]
+
+[[output]]
+name = "23BCS112"
+type = "pdf"
+# shell_escape = true
