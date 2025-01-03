@@ -106,6 +106,78 @@ Windows is a product line of proprietary graphical operating systems developed a
     \item Windows 11 (2021)
 \end{enumerate}
 
+\subsubsection{MS Dos Commands}
+
+These are some of the commands using the command line interface (CLI) which are used to navigate, access, modify and edit the files and file systems. Even in the modern day windows computers running Windows 11 or 10 etc, we can use these commands to complete tasks that is not normally possible by the Graphical User Interface (GUI). \cite{geeksforgeeksMSDosCommands}
+
+\begin{enumerate}
+    \item \texttt{CD [drive:][path]} - Get the current directory to the specified folder.
+    \item \texttt{DIR [drive:][path]} - Displays a list of files and subdirectories in a directory.
+    \item \texttt{COPY [source] [destination]} - Copies files from one location to another.
+    \item \texttt{DEL [drive:][path]} - Deletes one or more files.
+    \item \texttt{REN [drive:][path][filename1] [filename2]} - Renames a file or directory.
+    \item \texttt{MKDIR [drive:][path]} - Creates a new directory.
+    \item \texttt{RMDIR [drive:][path]} - Removes an existing directory.
+    \item \texttt{TYPE [drive:][path]} - filename Displays the contents of a text file.
+    \item \texttt{EDIT [drive:][path]filename} - Opens the MS-DOS text editor for editing a specified file.
+    \item \texttt{CHKDSK [volume:][[path]filename] [/F] [/V] [/R] [/X] [/I] [/C] [/L[:size]] [/B]} - Scans and fixes errors on a disk.
+    \item \texttt{FORMAT volume [/FS:file-system] [/V:label] [/Q] [/L[:size]] [/A:size] [/C] [/X]} - Prepares a storage medium for data storage.
+    \item \texttt{XCOPY [source] [destination] [/E] [/C] [/H] [/R] [/Y]} - Copies files and directories, including subdirectories.
+    \item \texttt{TREE [drive:][path]} - Graphically displays the folder structure of a drive or path.
+    \item \texttt{DATE [MM-DD-YYYY]} - Displays or sets the system date.
+    \item \texttt{TIME [HH: MM: SS]} - Displays or sets the system time.
+    \item \texttt{HELP [command]} - Provides help information for MS-DOS commands.
+    \item \texttt{EXIT} - Exits the MS-DOS command prompt or a batch file.
+    \item \texttt{ATTRIB [+ R|-R] [+A|-A] [+ H|-H] [+ S|-S] [d:][path]filename [/S]} - Sets or clears file attributes (Read-Only, Archive, System, Hidden), managing file visibility and access in MS-DOS.
+    \item \texttt{MODE [device] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]} - Configures system devices.
+    \item \texttt{DISKCOPY [drive1:][path1][filename1] [drive2:][path2][filename2]} - Copies the contents of one disk to another.
+    \item \texttt{MEM[/program|/debug|/classify|/free|/module(name)] [/page]} - Displays the amount of used and free memory in the system.
+    \item \texttt{SCANDISK [/SURFACE] [/AUTOFIX] [/CHECKONLY]} - Scans and fixes disk errors.
+    \item \texttt{UNDELETE [drive:][path][filename]} - Restores a deleted file.
+    \item \texttt{ASSIGN [drive1:=[drive2:]]} - Redirects requests for drive letters to a different drive.
+    \item \texttt{FDISK} - Manages disk partitions.
+    \item \texttt{BACKUP [source] [destination] [/S]} - Backs up files and directories.
+    \item \texttt{RESTORE [source] [destination] [/S]} - Restores files and directories from a backup.
+    \item \texttt{MSCDEX [/D: driver /L:drive] [/M:bufsize] [/E /S /V]} - Provides CD-ROM access.
+    \item \texttt{SYS [drive1:][path]} - Transfers system files to a disk.
+    \item \texttt{SHARE [/F:(space)] [/L:(locks)]} - Installs file-sharing and locking capabilities.
+    \item \texttt{SMARTDRV [size] [/E /V] [/C] [/L:size]} - Disk caching utility.
+    \item \texttt{SETVER [drive:][path]filename [/B:bytes]} - Sets the MS-DOS version number for a program.
+    \item \texttt{ASSIGN [/D]} - Disables automatic drive-letter assignments.
+    \item \texttt{FASTHELP [command] [command] /?} - Provides a quick overview of MS-DOS commands.
+    \item \texttt{FC [/A] [/C] [/L] [/LBn] [/N] [/OFF[LINE]] [/T]} - Compares two files or sets of files and displays the differences between them.
+    \item \texttt{FIND [/V] [/C] [/N] [/I] [/OFF[LINE]] "string" [[drive:][path]filename[ ...]]} - Searches for a text string in files.
+    \item \texttt{MORE [filename]} - Display the content of a text file one screen at a time
+    \item \texttt{ECHO [on/off]} - This command can either show or hide the text of the commands you type. Command echoing is on by default
+    \item \texttt{ECHO [<message>]} - Specifies the text to display on the screen.
+    \item \texttt{PATH [[drive:][path] [;...]]} - Displays or sets a search path for executable files.
+    \item \texttt{SET [variable=[string]]} - Sets or displays environment variables.
+    \item \texttt{VOL [drive:]} - Displays a disk label and serial number.
+    \item \texttt{SUBST [drive1: [drive2:]path]} - Associates a path with a drive letter.
+    \item \texttt{EDLIN [drive:][path][filename]} - Edits text files.
+    \item \texttt{DEBUG [drive:][path][filename]} - Starts the Debug program for testing and debugging assembly-language programs.
+    \item \texttt{HIMEM.SYS [/TESTMEM:off] [/HMAMIN=amount]} - Provides upper memory block (UMB) and high memory area (HMA) support.
+    \item \texttt{UNFORMAT [drive:][path]} - Restores a formatted disk.
+    \item \texttt{QBASIC [drive:][path]} - Starts the MS-DOS-based application for creating and running BASIC programs.
+    \item \texttt{KEYB [/CODEPAGE=page[,country]] [/E]} - Configures a keyboard for a specific language.
+    \item \texttt{CHOICE [/C:choices] [/N] [/S] [/T:c,nn]} - Provides a prompt with a list of choices.
+    \item \texttt{DISKCOMP [drive1:][drive2:]} - Compares the contents of two floppy disks.
+    \item \texttt{PRINT [/D:device] [filename]} - Sends a text file to a printer.
+    \item \texttt{SORT [drive:][path][filename]} - Sorts the contents of a text file.
+    \item \texttt{APPEND [[drive:]path[;...]]} - Sets or displays the search path for data files.
+    \item \texttt{ASSOC [.ext[=[fileType]]]} - Associates file extension with a file type.
+    \item \texttt{LABEL [drive:][label]} - Creates, changes, or deletes the volume label of a disk.
+    \item \texttt{RECOVER [drive:][path][filename]} - Recovers readable information from a bad or defective disk.
+    \item \texttt{FASTOPEN [/X] [drive:] [path] [/R]} - Speeds up the opening of files.
+    \item \texttt{GOTO <label>} - Directs the command interpreter to a labeled line in a batch program.
+    \item \texttt{SHIFT [/n <N>]} - Shifts the position of batch parameters in a batch file.
+    \item \texttt{JOIN path [drive:]} - Joins a drive letter and directory path.
+    \item \texttt{SMARTDRV [size] [buffers] [doublebuffer] [/E] [/C] [/L] [/V] [/B]} - Manages and optimizes disk caching.
+    \item \texttt{BATCH [filename]} - Executes the commands specified in a batch file.
+    \item \texttt{CALL [drive:][path]filename [batch-parameters]} - Calls one batch program from another
+    
+\end{enumerate}
+
 \newpage
 \subsection{Mac OS}
 
@@ -147,10 +219,3 @@ Linux is the \emph{most widely used operating system} (mainly used in servers an
 Linux is distributed to the general public as distributions(distros). The most famous being Ubuntu which is based on another distro named Debian. Similarly there are other distributions like Arch Linux, NixOS, Gentoo, Fedora etc. Since the kernel itself is opensource, anyone can create their own disto and distribute it to the general public. Here is a link to a very large image which contains many distributions and their timeline.
 
 \url{https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg}
-
-
-\clearpage% or cleardoublepage
-\phantomsection
-\addcontentsline{toc}{section}{References}
-\bibliographystyle{plain}
-\bibliography{refernces}
